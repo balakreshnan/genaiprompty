@@ -1,0 +1,171 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "c22a99e3-7398-4a70-a113-b1fab755528b_0",
+      "status": "Failed",
+      "error": {
+        "message": "Execution failure in '_traced_sync.<locals>.wrapped': (WrappedOpenAIError) OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+        "messageFormat": "Execution failure in '{func_name}': {error_type_and_message}",
+        "messageParameters": {
+          "error_type_and_message": "(WrappedOpenAIError) OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+          "func_name": "_traced_sync.<locals>.wrapped"
+        },
+        "referenceCode": "Unknown",
+        "code": "UserError",
+        "innerError": {
+          "code": "ScriptExecutionError",
+          "innerError": null
+        },
+        "additionalInfo": [
+          {
+            "type": "FlexFlowExecutionErrorDetails",
+            "info": {
+              "type": "WrappedOpenAIError",
+              "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+              "traceback": "Traceback (most recent call last):\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 1082, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\core\\_flow.py\", line 460, in __call__\n    response = send_request_to_llm(api_client, self._model.api, params)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 199, in send_request_to_llm\n    result = client.chat.completions.create(**parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\tracing\\_integrations\\_openai_injector.py\", line 95, in wrapper\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\tracing\\_trace.py\", line 556, in wrapped\n    output = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\openai\\_utils\\_utils.py\", line 277, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\openai\\resources\\chat\\completions.py\", line 646, in create\n    return self._post(\n           ^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1266, in post\n    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\openai\\_base_client.py\", line 942, in request\n    return self._request(\n           ^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\openai\\_base_client.py\", line 1046, in _request\n    raise self._make_status_error_from_response(err.response) from None\nopenai.NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\tracing\\_trace.py\", line 556, in wrapped\n    output = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\tracing\\_trace.py\", line 556, in wrapped\n    output = func(*args, **kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\Code\\AIStudio\\genaiprompty\\.venv\\Lib\\site-packages\\promptflow\\core\\_prompty_utils.py\", line 1110, in wrapper\n    raise WrappedOpenAIError(e)\npromptflow.core._errors.WrappedOpenAIError: OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]\n"
+            }
+          }
+        ],
+        "debugInfo": {
+          "type": "ScriptExecutionError",
+          "message": "Execution failure in '_traced_sync.<locals>.wrapped': (WrappedOpenAIError) OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+          "stackTrace": "Traceback (most recent call last):\n",
+          "innerException": null
+        }
+      },
+      "inputs": {
+        "first_name": "John",
+        "last_name": "Doh",
+        "question": "What is the capital of France"
+      },
+      "output": null,
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "c22a99e3-7398-4a70-a113-b1fab755528b",
+      "root_run_id": "c22a99e3-7398-4a70-a113-b1fab755528b",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2024-08-01T15:47:37.892025Z",
+      "end_time": "2024-08-01T15:47:39.053957Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "Basic Prompt",
+          "type": "Function",
+          "inputs": {
+            "first_name": "John",
+            "last_name": "Doh",
+            "question": "What is the capital of France"
+          },
+          "output": null,
+          "start_time": 1722545257.892025,
+          "end_time": 1722545259.029061,
+          "error": {
+            "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+            "type": "WrappedOpenAIError"
+          },
+          "children": [
+            {
+              "name": "Prompty",
+              "type": "Function",
+              "inputs": {
+                "first_name": "John",
+                "last_name": "Doh",
+                "question": "What is the capital of France"
+              },
+              "output": null,
+              "start_time": 1722545257.893026,
+              "end_time": 1722545258.952963,
+              "error": {
+                "message": "OpenAI API hits NotFoundError: Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}} [Error reference: https://platform.openai.com/docs/guides/error-codes/api-errors]",
+                "type": "WrappedOpenAIError"
+              },
+              "children": [
+                {
+                  "name": "convert_prompt_template",
+                  "type": "Function",
+                  "inputs": {
+                    "template": "system:\nYou are an AI assistant who helps people find information.\nAs the assistant, you answer questions briefly, succinctly,\nand in a personable manner using markdown and even add some personal flair with appropriate emojis.\n\n# Safety\n- You **should always** reference factual statements to search results based on [relevant documents]\n- Search results based on [relevant documents] may be incomplete or irrelevant. You do not make assumptions\n# Customer\nYou are helping {{first_name}} {{last_name}} to find answers to their questions.\nUse their name to address them in your responses.\n\nuser:\n{{question}}",
+                    "inputs": {
+                      "first_name": "John",
+                      "last_name": "Doh",
+                      "question": "What is the capital of France"
+                    }
+                  },
+                  "output": [
+                    {
+                      "role": "system",
+                      "content": "You are an AI assistant who helps people find information.\nAs the assistant, you answer questions briefly, succinctly,\nand in a personable manner using markdown and even add some personal flair with appropriate emojis.\n\n# Safety\n- You **should always** reference factual statements to search results based on [relevant documents]\n- Search results based on [relevant documents] may be incomplete or irrelevant. You do not make assumptions\n# Customer\nYou are helping John Doh to find answers to their questions.\nUse their name to address them in your responses."
+                    },
+                    {
+                      "role": "user",
+                      "content": "What is the capital of France"
+                    }
+                  ],
+                  "start_time": 1722545257.894026,
+                  "end_time": 1722545257.897537,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "3a361619-b3e6-4895-895c-95ecc0a095c9",
+                  "id": "3ad5c1c9-b26a-4425-a3d1-0e4934752ff5",
+                  "function": "convert_prompt_template"
+                },
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "max_tokens": 128,
+                    "temperature": 0.2,
+                    "model": "gpt-4o-g",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are an AI assistant who helps people find information.\nAs the assistant, you answer questions briefly, succinctly,\nand in a personable manner using markdown and even add some personal flair with appropriate emojis.\n\n# Safety\n- You **should always** reference factual statements to search results based on [relevant documents]\n- Search results based on [relevant documents] may be incomplete or irrelevant. You do not make assumptions\n# Customer\nYou are helping John Doh to find answers to their questions.\nUse their name to address them in your responses."
+                      },
+                      {
+                        "role": "user",
+                        "content": "What is the capital of France"
+                      }
+                    ]
+                  },
+                  "output": null,
+                  "start_time": 1722545258.508034,
+                  "end_time": 1722545258.856743,
+                  "error": {
+                    "message": "Error code: 404 - {'error': {'code': '404', 'message': 'Resource not found'}}",
+                    "type": "NotFoundError"
+                  },
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "3a361619-b3e6-4895-895c-95ecc0a095c9",
+                  "id": "28a98e95-d0b0-4ec2-8f85-6e899394590d",
+                  "function": "openai.resources.chat.completions.Completions.create"
+                }
+              ],
+              "node_name": null,
+              "parent_id": "8072eeaf-6974-467c-888f-414ab131e33a",
+              "id": "3a361619-b3e6-4895-895c-95ecc0a095c9",
+              "function": "Prompty"
+            }
+          ],
+          "node_name": null,
+          "parent_id": "",
+          "id": "8072eeaf-6974-467c-888f-414ab131e33a",
+          "function": "Prompty"
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 1.161932
+      },
+      "result": null,
+      "upload_metrics": false,
+      "otel_trace_id": "0x0814124607823b9da84e65577be0dd55",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": []
+}
