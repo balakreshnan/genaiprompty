@@ -1,0 +1,25 @@
+{
+  "package": {},
+  "code": {
+    "chat1.prompty": {
+      "type": "llm",
+      "inputs": {
+        "first_name": {
+          "type": [
+            "string"
+          ]
+        },
+        "last_name": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}

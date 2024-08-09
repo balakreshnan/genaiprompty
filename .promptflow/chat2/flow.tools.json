@@ -1,0 +1,20 @@
+{
+  "package": {},
+  "code": {
+    "chat2.prompty": {
+      "type": "llm",
+      "inputs": {
+        "chat_input": {
+          "type": [
+            "string"
+          ]
+        },
+        "chat_history": {
+          "type": [
+            "list"
+          ]
+        }
+      }
+    }
+  }
+}
